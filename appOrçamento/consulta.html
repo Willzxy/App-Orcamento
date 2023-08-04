@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="estilos/style.css">
+    <title>Home</title>
+</head>
+<body onload="carregar_lista()">
+    <header>
+        <div class="info">
+            <h1 class="logo"></h1>
+            <span class="material-symbols-outlined menu">menu</span>
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="index.html">Cadastrar</a></li>
+                <li><a href="consulta.html">Consultar</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <form action="">
+            <h1>Registro de nova despesa</h1>
+            <div class="div-1">
+                <select class="smallbox box" name="anoDate" id="anoDate">
+                    <option value="" >Ano</option>
+                    <option value="2023" >2023</option>
+                    <option value="2022" >2022</option>
+                    <option value="2021" >2021</option>
+                    <option value="2020" >2020</option>
+                </select>
+                <select class="smallbox box" name="mesDate" id="mesDate">
+                    <option value=""  >Mês</option>
+                    <option value="Janeiro" >Janeiro</option>
+                    <option value="Fevereiro" >Fevereiro</option>
+                    <option value="Março" >Março</option>
+                    <option value="Maio" >Maio</option>
+                    <option value="Abril" >Abril</option>
+                    <option value="Junho" >Junho</option>
+                    <option value="Julho" >Julho</option>
+                    <option value="Agosto" >Agosto</option>
+                    <option value="Setembro" >Setembro</option>
+                    <option value="Outubro" >Outubro</option>
+                    <option value="Novembro" >Novembro</option>
+                    <option value="Dezembro" >Dezembro</option>
+                </select>
+                <input class="smallbox box" id="dia" placeholder="Dia" type="number">
+                <select class="mediumbox box" name="tipo" id="tipo">
+                    <option value="" >----------- Tipo -----------</option>
+                    <option value="Educação" >Educação</option>
+                    <option value="Físico" >Físico</option>
+                    <option value="Entreterimento" >Entreterimento</option>
+                    <option value="Segurança" >Segurança</option>
+                </select>
+            </div>
+            <div class="div-2">
+                <input id="descricao" class="largebox box" type="text" placeholder="Descrição">
+                <input class="smallbox box preco" type="number" name="preco" id="preco" placeholder="Preço">
+                <input class="menu" type="button" onclick="carregar_filtrado()" value="+">
+            </div>
+        </form>
+        <div class="output">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="small">DATA</th>
+                        <th class="small">TIPO</th>
+                        <th class="medium">DESCRIÇÃO</th>
+                        <th class="small">VALOR</th>
+                        <th class="delet">+</th>
+                    </tr>
+                </thead>
+            </table>
+
+            <div id="output-dados">
+
+            </div>
+
+        </div>
+    </main>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
